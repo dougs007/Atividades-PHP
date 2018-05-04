@@ -1,5 +1,16 @@
--> Este repositório tem seu objetivo a fim de passar conhecimento sobre a linguagem de PHP, no mesmo conterá alguns exemplos de atividades feitas durante o estudo da linguagem.
- -> Será um prazer poder ajudar alguém que esteja buscando aprender a linguagem, tentarei neste repositório detalhar e comentar ao máximo cada linha e cada função que seja usada neste, caso não fique claro ou lhes surja alguma dúvida, poderão estar entrando em contato
+# PHP
 
--> E-mail: douglasantana007@gmail.com
--> Telegram: @dougs007 
+Bem vindo à documentação do meu repositório sobre PHP! Aqui você vai encontrar diversas atividades e explicações sobre os meus estudos sobre a linguagem. Esse repositório está sendo criado durante a minha formação no curso de Análise e Desenvolvimento de Sistemas.
+* data -> 04/05/2018 - 3º Semestre IESB Oeste
+
+## Tecnologias
+* [PHP](http://php.net/)
+* [jQuery](https://jquery.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Materialize.css](https://materializecss.com)
+
+## Dúvidas
+Caso você tenha sentido falta de alguma coisa ou tenha ficado com alguma dúvida, poderá entrar em contato, segue abaixo as redes de comunicações.
+
+* Telegram -> @dougs007
+* E-mail -> douglasantana007@gmail.com
