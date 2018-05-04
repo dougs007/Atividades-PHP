@@ -1,5 +1,5 @@
 <?php
-include('Ex2-navbar.php');
+include('Cabecalho.php');
 
 //inicio da variavel
 $id = $_POST['idade'];

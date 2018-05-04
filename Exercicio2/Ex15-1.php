@@ -1,7 +1,7 @@
 <title>Exercício 15 - PHP</title>
 
 <?php
-include('Ex2-navbar.php');
+include('Cabecalho.php');
 
 // INICIO DAS VARIAVEIS
 $nome = $_POST['nome'];

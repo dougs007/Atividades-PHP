@@ -1,9 +1,8 @@
 <title>Home</title>
 
 <?php
-include_once('Ex2-navbar.php');
-
-// INÍCIO DA ATIVIDADE Nº16
+// INCLUI O CABECALHO DO EXERCÍCIO
+include_once('Cabecalho.php');
 
 echo "
 <div class='row'>

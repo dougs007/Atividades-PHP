@@ -1,5 +1,5 @@
 <?php
-include('Ex2-navbar.php');
+include('Cabecalho.php');
 
 //inicio das variaveis para cada nota inserida pelo user.
 $n1 = $_POST['n1'];

@@ -1,5 +1,5 @@
 <?php
-include('Ex2-navbar.php');
+include('Cabecalho.php');
 
 //inicio das variaveis
 $numb = $_POST['numb'];

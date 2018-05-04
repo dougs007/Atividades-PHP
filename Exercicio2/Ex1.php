@@ -1,5 +1,5 @@
 <?php
-include('Ex2-navbar.php');
+include('Cabecalho/Cabecalho.php');
 
 // INÍCIO DA ATIVIDADE Nº1
 

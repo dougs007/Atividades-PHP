@@ -1,7 +1,7 @@
 <title>Exercício 13 - PHP</title>
 
 <?php
-include('Ex2-navbar.php');
+include('Cabecalho.php');
 
 $id = $_POST['id'];
 
