@@ -9,7 +9,7 @@ include_once '../cabecalho.php';
 
     <h1 class="text-center">Responsáveis</h1>
 
-    <a class= "btn btn-info" href=formulario.php>Novo Responsável</a>
+    <a class= "btn btn-primary" href=formulario.php>Novo Responsável</a>
 
     <table class="table table-bordered table-hover table-striped table-condensed">
         <tr>

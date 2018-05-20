@@ -182,6 +182,32 @@ class Aluno
         return $conexao->recuperarDados($sql);
     }
 
+    /**
+     * @param $id_aluno
+     * Função para carregar todos os dados por ID para ser feito a alteração.
+     * Update
+     */
+    public function carregarPorId($id_aluno)
+    {
+        $conexao = new Conexao();
+
+        $sql = "SELECT * FROM aluno WHERE id_aluno = '$id_aluno'";
+
+        $dados = $conexao->recuperarDados($sql);
+
+        $this->id_aluno = $dados[0]['id_aluno'];
+        $this->matricula = $dados[0]['matricula'];
+        $this->nome = $dados[0]['nome'];
+        $this->telefone = $dados[0]['telefone'];
+        $this->endereco = $dados[0]['endereco'];
+        $this->data_nascimento = $dados[0]['data_nascimento'];
+        $this->sexo = $dados[0]['sexo'];
+        $this->id_responsavel = $dados[0]['id_responsavel'];
+        $this->id_curso = $dados[0]['id_curso'];
+        $this->nota = $dados[0]['nota'];
+
+    }
+
     public function inserir($dados)
     {
 
@@ -199,6 +225,42 @@ class Aluno
 
         $sql = "INSERT INTO aluno (matricula, nome, telefone, endereco, data_nascimento, sexo, id_responsavel, id_curso, nota) VALUES
         ('$matricula', '$nome', '$telefone', '$endereco', '$data_nascimento', '$sexo', '$id_responsavel', '$id_curso', '$nota');";
+
+        return $conexao->executar($sql);
+    }
+
+    /**
+     * @param $dados
+     * @return mixed
+     * Função para alterar dados já existentes
+     */
+    public function alterar($dados)
+    {
+
+        $id_aluno = $dados['id_aluno'];
+        $matricula = $dados['matricula'];
+        $nome = $dados['nome'];
+        $telefone = $dados['telefone'];
+        $endereco = $dados['endereco'];
+        $data_nascimento = $dados['data_nascimento'];
+        $sexo = $dados['sexo'];
+        $id_responsavel = $dados['id_responsavel'];
+        $id_curso = $dados['id_curso'];
+        $nota = $dados['nota'];
+
+        $conexao = new Conexao();
+
+        $sql = "UPDATE aluno 
+                      SET matricula = '$matricula',
+                          nome = '$nome', 
+                          telefone = '$telefone', 
+                          endereco = '$endereco', 
+                          data_nascimento = '$data_nascimento', 
+                          sexo = '$sexo', 
+                          id_responsavel = '$id_responsavel', 
+                          id_curso = '$id_curso', 
+                          nota = '$nota' 
+                WHERE id_aluno = '$id_aluno'";
 
         return $conexao->executar($sql);
     }

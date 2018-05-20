@@ -51,6 +51,7 @@ class Curso
     /**
      * @param $id_curso
      * Função para carregar todos os dados por ID para ser feito a alteração.
+     * Update
      */
     public function carregarPorId($id_curso)
     {
