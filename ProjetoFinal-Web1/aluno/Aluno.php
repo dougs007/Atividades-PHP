@@ -267,7 +267,17 @@ class Aluno
 
         $conexao = new Conexao();
 
-        $sql = "UPDATE aluno SET matricula = '$matricula', nome = '$nome', telefone = '$telefone', endereco = '$endereco', data_nascimento = '$data_nascimento', sexo = '$sexo', id_responsavel = '$id_responsavel', id_curso = '$id_curso', nota = '$nota' WHERE id_aluno = '$id_aluno'";
+        $sql = "update aluno set
+                  nome = '$nome',
+                  matricula = '$matricula',
+                  telefone = '$telefone',
+                  endereco = '$endereco',
+                  data_nascimento = '$data_nascimento',
+                  sexo = '$sexo',
+                  id_responsavel = '$id_responsavel',
+                  id_curso = '$id_curso',
+                  nota = '$nota'
+                where id_aluno = $id_aluno";
 
         return $conexao->executar($sql);
     }
@@ -283,7 +293,7 @@ class Aluno
 
         $conexao = new Conexao();
 
-        $sql = "delete from aluno where id_aluno = $id_aluno;";
+        $sql = "DELETE FROM aluno WHERE id_aluno = $id_aluno;";
 
         return $conexao->executar($sql);
     }
