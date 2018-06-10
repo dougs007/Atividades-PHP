@@ -14,15 +14,10 @@ include_once '../cabecalho.php';
     <table class="table table-bordered table-hover table-striped table-condensed">
         <tr>
             <td align="center">Ações</td>
-            <td>Id Aluno</td>
-            <td>Matricula</td>
+            <td>Id</td>
             <td>Nome</td>
             <td>Telefone</td>
             <td>Endereço</td>
-            <td>Data Nascimento</td>
-            <td>Sexo</td>
-            <td>Id Responsável</td>
-            <td>Id Curso</td>
             <td>Nota</td>
         </tr>
 
@@ -37,14 +32,9 @@ include_once '../cabecalho.php';
                     </a>
                 </td>
                 <td><?= $aluno['id_aluno'] ?></td>
-                <td><?= $aluno['matricula'] ?></td>
                 <td><?= $aluno['nome'] ?></td>
                 <td><?= $aluno['telefone'] ?></td>
                 <td><?= $aluno['endereco'] ?></td>
-                <td><?= $aluno['data_nascimento'] ?></td>
-                <td><?= $aluno['sexo'] ?></td>
-                <td><?= $aluno['id_responsavel'] ?></td>
-                <td><?= $aluno['id_curso'] ?></td>
                 <td><?= number_format($aluno['nota'], 1, ',', '.'); ?></td>
             </tr>
         <?php } ?>
