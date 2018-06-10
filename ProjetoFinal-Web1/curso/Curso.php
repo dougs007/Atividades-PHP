@@ -58,7 +58,9 @@ class Curso
         $conexao = new Conexao();
 
         $sql = "SELECT * FROM curso WHERE id_curso = '$id_curso'";
+
         $dados = $conexao->recuperarDados($sql);
+
         $this->id_curso = $dados[0]['id_curso'];
         $this->nome = $dados[0]['nome'];
     }
@@ -86,7 +88,9 @@ class Curso
     {
         $id_curso = $dados['id_curso'];
         $nome = $dados['nome'];
+
         $conexao = new Conexao();
+
         $sql = "UPDATE curso SET nome = '$nome' WHERE id_curso = '$id_curso' ";
 
         return $conexao->executar($sql);

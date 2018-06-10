@@ -3,13 +3,13 @@ include_once 'Responsavel.php';
 
 $responsavel = new Responsavel();
 
-switch ($_GET['acao']){
+switch ($_GET['acao']) {
     case 'salvar';
-        // se o id não estiver vazio ele altera, senão ele cria um novo.
+        # Se o id não estiver vazio ele altera, senão ele cria um novo.
         if (!empty($_POST['id_responsavel'])) {
-            $curso->alterar($_POST);
+            $responsavel->alterar($_POST);
         } else {
-            $curso->inserir($_POST);
+            $responsavel->inserir($_POST);
         }
         break;
     case 'excluir';

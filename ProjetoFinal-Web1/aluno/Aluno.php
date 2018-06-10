@@ -175,6 +175,11 @@ class Aluno
         $this->nota = $nota;
     }
 
+
+    /**
+     * Função para listagem de todos os dados existentes.
+     * Read
+     */
     public function recuperarDados()
     {
         $conexao = new Conexao();
@@ -208,6 +213,12 @@ class Aluno
 
     }
 
+    /**
+     * @param $dados
+     * @return mixed
+     * Função para inserir dados novos.
+     * Insert
+     */
     public function inserir($dados)
     {
 
@@ -223,8 +234,13 @@ class Aluno
 
         $conexao = new Conexao();
 
-        $sql = "INSERT INTO aluno (matricula, nome, telefone, endereco, data_nascimento, sexo, id_responsavel, id_curso, nota) VALUES
-        ('$matricula', '$nome', '$telefone', '$endereco', '$data_nascimento', '$sexo', '$id_responsavel', '$id_curso', '$nota');";
+        $sql = "INSERT INTO aluno (matricula, nome, telefone, 
+                                   endereco, data_nascimento, sexo, 
+                                   id_responsavel, id_curso, nota) 
+                       VALUES  ('$matricula', '$nome', '$telefone', 
+                                '$endereco', '$data_nascimento', '$sexo', 
+                                '$id_responsavel', '$id_curso', '$nota')
+        ";
 
         return $conexao->executar($sql);
     }
@@ -232,7 +248,8 @@ class Aluno
     /**
      * @param $dados
      * @return mixed
-     * Função para alterar dados já existentes
+     * Função para alterar dados já existentes.
+     * Update
      */
     public function alterar($dados)
     {
@@ -250,21 +267,17 @@ class Aluno
 
         $conexao = new Conexao();
 
-        $sql = "UPDATE aluno 
-                      SET matricula = '$matricula',
-                          nome = '$nome', 
-                          telefone = '$telefone', 
-                          endereco = '$endereco', 
-                          data_nascimento = '$data_nascimento', 
-                          sexo = '$sexo', 
-                          id_responsavel = '$id_responsavel', 
-                          id_curso = '$id_curso', 
-                          nota = '$nota' 
-                WHERE id_aluno = '$id_aluno'";
+        $sql = "UPDATE aluno SET matricula = '$matricula', nome = '$nome', telefone = '$telefone', endereco = '$endereco', data_nascimento = '$data_nascimento', sexo = '$sexo', id_responsavel = '$id_responsavel', id_curso = '$id_curso', nota = '$nota' WHERE id_aluno = '$id_aluno'";
 
         return $conexao->executar($sql);
     }
 
+    /**
+     * @param $id_aluno
+     * @return mixed
+     * Função para excluir algum registro existente.
+     * Delete
+     */
     public function excluir($id_aluno)
     {
 

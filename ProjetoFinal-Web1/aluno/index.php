@@ -28,25 +28,27 @@ include_once '../cabecalho.php';
 
         <?php foreach ($arAlunos as $aluno) { ?>
             <tr>
-                <td style="width: 151px"><a
-                            href="processamento.php?acao=excluir&id_aluno=<?php echo $aluno['id_aluno'] ?>"
-                            class="btn btn-danger">Excluir</a>
-                    <a href="formulario.php?id_aluno=<?php echo $aluno['id_aluno'] ?>" class="btn
-                       btn-warning">Alterar</a>
+                <td style="width: 151px">
+                    <a href="processamento.php?acao=excluir&id_aluno=<?= $aluno['id_aluno'] ?>"
+                       class="btn btn-danger">Excluir
+                    </a>
+                    <a href="formulario.php?id_aluno=<?= $aluno['id_aluno'] ?>"
+                       class="btn btn-warning">Alterar
+                    </a>
                 </td>
-                <td><?php echo $aluno['id_aluno'] ?></td>
-                <td><?php echo $aluno['matricula'] ?></td>
-                <td><?php echo $aluno['nome'] ?></td>
-                <td><?php echo $aluno['telefone'] ?></td>
-                <td><?php echo $aluno['endereco'] ?></td>
-                <td><?php echo $aluno['data_nascimento'] ?></td>
-<!--                <td>--><?php //echo date_format($aluno['data_nascimento'],'d-m-Y'); ?><!--</td>-->
-                <td><?php echo $aluno['sexo'] ?></td>
-                <td><?php echo $aluno['id_responsavel'] ?></td>
-                <td><?php echo $aluno['id_curso'] ?></td>
-                <td><?php echo number_format($aluno['nota'],1,',', '.'); ?></td>
+                <td><?= $aluno['id_aluno'] ?></td>
+                <td><?= $aluno['matricula'] ?></td>
+                <td><?= $aluno['nome'] ?></td>
+                <td><?= $aluno['telefone'] ?></td>
+                <td><?= $aluno['endereco'] ?></td>
+                <td><?= $aluno['data_nascimento'] ?></td>
+                <td><?= $aluno['sexo'] ?></td>
+                <td><?= $aluno['id_responsavel'] ?></td>
+                <td><?= $aluno['id_curso'] ?></td>
+                <td><?= number_format($aluno['nota'], 1, ',', '.'); ?></td>
             </tr>
         <?php } ?>
+
     </table>
 
 <?php
