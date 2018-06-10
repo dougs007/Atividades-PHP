@@ -9,15 +9,15 @@ if (!empty($_GET['id_responsavel'])) {
     $responsavel->carregarPorId($_GET['id_responsavel']);
 }
 
+include_once '../cabecalho.php';
+
 if (!empty($_GET)) {
     echo "<h1 class='text-center'>Atualizar Responsável</h1>";
 } else
     echo "<h1 class='text-center'>Novo Responsável</h1>";
 
-include_once '../cabecalho.php';
 ?>
 
-    <h1 class="text-center">Novo Responsável</h1>
     <div class="container">
 
         <form class="form-horizontal" action="processamento.php?acao=salvar" method="post">
