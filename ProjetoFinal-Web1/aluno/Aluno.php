@@ -267,7 +267,7 @@ class Aluno
 
         $conexao = new Conexao();
 
-        $sql = "update aluno set
+        $sql = "UPDATE aluno SET
                   nome = '$nome',
                   matricula = '$matricula',
                   telefone = '$telefone',
@@ -277,7 +277,7 @@ class Aluno
                   id_responsavel = '$id_responsavel',
                   id_curso = '$id_curso',
                   nota = '$nota'
-                where id_aluno = $id_aluno";
+                WHERE id_aluno = $id_aluno";
 
         return $conexao->executar($sql);
     }
