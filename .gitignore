@@ -1,5 +1,11 @@
+Aqui serão mantidos todos os arquivos que serão ignorados na hora do versionamento.
+
+# Arquivos da IDE PhpStorm
+
+.idea
 .idea/Atividades-PHP.iml
 .idea/misc.xml
 .idea/modules.xml
 .idea/workspace.xml
-.ProjetoFinal-Web1/.idea/workspace.xml
+.ProjetoFinal-Web1/.idea
+.Dever-10/.idea
